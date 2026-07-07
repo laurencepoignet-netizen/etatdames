@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales & CGV — État Dames</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0d0d0f;
+    --dore: #c9a84c;
+    --blanc: #f5f0e8;
+    --bleu: #475465;
+    --dore-light: rgba(201,168,76,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--noir);
+    color: var(--blanc);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 100;
+    height: 48px;
+    background: rgba(13,13,15,0.97);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+  }
+
+  nav a.brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--dore);
+    opacity: 0.95;
+    text-decoration: none;
+  }
+
+  nav a.back {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav a.back:hover { color: var(--dore); }
+
+  .spacer { height: 48px; }
+
+  .page-header {
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+  }
+
+  .page-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1.1;
+  }
+
+  .page-header h1 em {
+    font-style: italic;
+    color: var(--dore);
+  }
+
+  .page-header .sub {
+    margin-top: 16px;
+    font-size: 15px;
+    color: rgba(245,240,232,0.45);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ── TABS ── */
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    position: sticky;
+    top: 48px;
+    background: var(--noir);
+    z-index: 50;
+  }
+
+  .tab-btn {
+    padding: 20px 40px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.4);
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .tab-btn:hover { color: rgba(245,240,232,0.75); }
+
+  .tab-btn.active {
+    color: var(--dore);
+    border-bottom-color: var(--dore);
+  }
+
+  /* ── CONTENT PANELS ── */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .panel {
+    display: none;
+    padding: 72px 0 100px;
+  }
+
+  .panel.active { display: block; }
+
+  .panel h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.5vw, 40px);
+    color: var(--blanc);
+    margin-bottom: 8px;
+    padding-top: 48px;
+  }
+
+  .panel h2:first-child { padding-top: 0; }
+
+  .panel h2 span {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--dore);
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Jost', sans-serif;
+  }
+
+  .panel p {
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 1.85;
+    color: rgba(245,240,232,0.8);
+    margin-bottom: 16px;
+  }
+
+  .panel ul {
+    list-style: none;
+    margin: 12px 0 20px;
+  }
+
+  .panel ul li {
+    font-size: clamp(16px, 1.8vw, 18px);
+    color: rgba(245,240,232,0.8);
+    padding: 10px 0 10px 24px;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    position: relative;
+  }
+
+  .panel ul li:last-child { border-bottom: none; }
+
+  .panel ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--dore);
+    opacity: 0.5;
+  }
+
+  .panel strong {
+    color: var(--blanc);
+    font-weight: 500;
+  }
+
+  .highlight {
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-left: 3px solid var(--dore);
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: clamp(15px, 1.7vw, 17px);
+    color: rgba(245,240,232,0.85);
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--dore);
+    opacity: 0.4;
+    margin: 40px 0;
+  }
+
+  footer {
+    text-align: center;
+    padding: 48px 32px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    font-size: 14px;
+    color: rgba(245,240,232,0.3);
+  }
+
+  footer a {
+    color: var(--dore);
+    text-decoration: none;
+    opacity: 0.7;
+    margin: 0 12px;
+    letter-spacing: 0.05em;
+  }
+
+  footer a:hover { opacity: 1; }
+
+  @media (max-width: 600px) {
+    .tab-btn { padding: 16px 20px; font-size: 11px; }
+    .container { padding: 0 20px; }
+    .page-header { padding: 56px 20px 40px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="etat-dames-landing.html">État Dames</a>
+    <a class="back" href="etat-dames-landing.html">← Retour</a>
+  </div>
+</nav>
+<div class="spacer"></div>
+
+<div class="page-header">
+  <h1>Mentions légales<br><em>&amp; CGV</em></h1>
+  <p class="sub">Laurence Poignet EI — État Dames Coaching</p>
+</div>
+
+<!-- ── TABS ── -->
+<div class="tabs">
+  <button class="tab-btn active" onclick="showTab('mentions')">Mentions légales</button>
+  <button class="tab-btn" onclick="showTab('cgv')">CGV</button>
+</div>
+
+<!-- ── MENTIONS LÉGALES ── -->
+<div class="panel active" id="panel-mentions">
+  <div class="container">
+
+    <h2><span>Éditeur du site</span>Identification</h2>
+    <p><strong>Laurence Poignet</strong><br>
+    Entrepreneur individuel<br>
+    SIRET : 81093118800025<br>
+    APE : 74.90B — Activités spécialisées, scientifiques et techniques diverses<br>
+    Siège social : 40 rue Popincourt, 75011 Paris<br>
+    Email : <a href="mailto:laurencepoignet@etatdamescoaching.fr" style="color:var(--dore); text-decoration:none;">laurencepoignet@etatdamescoaching.fr</a><br>
+    Téléphone : 06 11 15 54 82</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Hébergement</span>Informations techniques</h2>
+    <p>Ce site est hébergé sur <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis).</p>
+
+    <div class="divider"></div>
+
+    <h2><span>TVA</span>Régime fiscal</h2>
+    <div class="highlight">
+      Conformément à l'article 293 B du Code général des impôts, Laurence Poignet EI n'est pas assujettie à la TVA.
+    </div>
+
+    <div class="divider"></div>
+
+    <h2><span>Propriété intellectuelle</span>Droits</h2>
+    <p>L'ensemble des contenus présents sur ce site (textes, visuels, structure, méthodes) est la propriété exclusive de Laurence Poignet. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Données personnelles</span>Protection & RGPD</h2>
+    <p>Les données collectées via ce site (formulaires, prises de contact) sont utilisées uniquement dans le cadre de la relation commerciale. Elles ne sont ni vendues ni cédées à des tiers.</p>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour l'exercer, contactez : <a href="mailto:laurencepoignet@etatdamescoaching.fr" style="color:var(--dore); text-decoration:none;">laurencepoignet@etatdamescoaching.fr</a></p>
+
+    <div class="divider"></div>
+
+    <h2><span>Litiges</span>Médiation</h2>
+    <p>En cas de litige, le droit français est applicable. Avant tout recours contentieux, le client est invité à contacter directement Laurence Poignet pour rechercher une solution amiable.</p>
+
+  </div>
+</div>
+
+<!-- ── CGV ── -->
+<div class="panel" id="panel-cgv">
+  <div class="container">
+
+    <h2><span>Article 1</span>Objet et champ d'application</h2>
+    <p>Les présentes Conditions Générales de Vente (CGV) ont pour objet de définir les droits et obligations de <strong>Laurence Poignet EI – État Dames Coaching</strong>, immatriculée sous le numéro SIRET <strong>81093118800025</strong>, dont le siège social est situé au <strong>40 rue Popincourt, 75011 Paris</strong>, et de ses clients dans le cadre de la vente de prestations de services.</p>
+    <p>Les prestations proposées incluent notamment :</p>
+    <ul>
+      <li>Accompagnements individuels</li>
+      <li>Ateliers collectifs</li>
+      <li>Interventions et formations</li>
+      <li>Produits et contenus numériques</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 2</span>Acceptation des conditions</h2>
+    <p>Toute commande implique l'acceptation pleine et entière des présentes CGV par le client. Les CGV applicables sont celles en vigueur à la date de signature du devis ou de la commande.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 3</span>Prix</h2>
+    <p>Les prestations sont proposées sur la base d'un tarif forfaitaire, communiqué au client avant toute validation.</p>
+    <div class="highlight">Conformément à l'article 293 B du Code général des impôts : <strong>TVA non applicable.</strong></div>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 4</span>Commande et contractualisation</h2>
+    <p>Les prestations font l'objet soit d'une commande en ligne, soit d'un devis signé. <strong>Le devis signé vaut engagement contractuel.</strong></p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 5</span>Modalités de paiement</h2>
+    <p>Le règlement des prestations s'effectue par virement bancaire. Les modalités de paiement (montant, échéancier) sont définies dans le devis.</p>
+    <div class="highlight"><strong>Le démarrage de l'accompagnement est conditionné à la réception du premier versement.</strong></div>
+    <p>En cas de paiement échelonné :</p>
+    <ul>
+      <li>les échéances sont dues le même jour du mois que la date de la première séance</li>
+      <li>les échéances doivent être respectées selon le calendrier défini</li>
+      <li>tout retard peut entraîner la suspension des prestations jusqu'à régularisation</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 6</span>Fourniture des prestations</h2>
+    <p>Les prestations sont réalisées à distance (visioconférence) ou selon les modalités définies dans le devis.</p>
+    <p>Le client s'engage à être présent aux séances et à disposer des moyens techniques nécessaires.</p>
+    <p>Toute annulation doit être notifiée par écrit au moins 48h avant la séance. <strong>Toute séance annulée moins de 48h avant son début, ou non honorée sans notification, est décomptée du nombre de séances prévues au contrat et ne donne lieu à aucun report ni remboursement.</strong></p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 7</span>Engagement et responsabilité</h2>
+    <p>L'accompagnement repose sur une <strong>obligation de moyens</strong> et non de résultat. Le client reste pleinement responsable de ses décisions et de la mise en œuvre des actions.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 8</span>Durée des prestations</h2>
+    <p>La durée, le nombre de séances et les modalités sont définis dans le devis. <strong>Toute prestation engagée est due dans son intégralité.</strong></p>
+    <div class="highlight"><strong>La durée totale de l'accompagnement ne peut excéder 7 mois</strong> à compter de la date de la première séance, toutes pauses et reports inclus. Au-delà de ce délai, les séances restantes sont définitivement perdues, sans report ni remboursement.</div>
+    <p>Les séances non utilisées dans les délais convenus ne sont ni reportées ni remboursées, sauf accord exceptionnel.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 9</span>Suspension à l'initiative de la cliente</h2>
+    <p>Toute demande de suspension doit être formulée par écrit.</p>
+    <div class="highlight"><strong>La suspension ne peut excéder 6 semaines consécutives.</strong> Au-delà, les séances restantes sont définitivement perdues, sans report ni remboursement.</div>
+    <p>Toute suspension est soumise à l'accord exprès de Laurence Poignet.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 10</span>Annulation et remboursement</h2>
+    <p>Toute prestation commencée est due. Aucun remboursement ne sera effectué en cas d'arrêt anticipé du fait du client. En cas d'annulation par le prestataire, une solution de report ou un remboursement sera proposé.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 11</span>Droit de rétractation</h2>
+    <p>Conformément à la loi, le client dispose d'un délai de 14 jours pour exercer son droit de rétractation (dans le cadre des ventes en ligne).</p>
+    <p>Ce droit ne s'applique pas si la prestation a commencé avec accord du client, ou si elle a été entièrement réalisée.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 12</span>Propriété intellectuelle</h2>
+    <p>Tous les contenus, outils et supports transmis dans le cadre des prestations restent la propriété exclusive de Laurence Poignet. Toute reproduction ou diffusion sans autorisation est interdite.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 13</span>Données personnelles</h2>
+    <p>Les données personnelles sont utilisées uniquement dans le cadre de la relation commerciale. Elles ne sont ni vendues ni cédées.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 14</span>Médiation</h2>
+    <p>En cas de litige, le client est invité à contacter en priorité le prestataire afin de rechercher une solution amiable.</p>
+    <p>À défaut d'accord amiable, le client peut recourir gratuitement au médiateur de la consommation désigné :</p>
+    <div class="highlight">
+      <strong>Société Médiation Professionnelle – Médiateurs Associés</strong><br>
+      Rue Marc Sangnier – 33130 Bègles<br>
+      <a href="https://www.mediateur-consommation-smp.fr" target="_blank" style="color:var(--dore); text-decoration:none;">www.mediateur-consommation-smp.fr</a>
+    </div>
+    <p>Conformément aux articles L.611-1 et suivants du Code de la consommation.</p>
+
+    <div class="divider"></div>
+
+    <h2><span>Article 15</span>Droit applicable</h2>
+    <p>Les présentes CGV sont soumises au droit français.</p>
+
+  </div>
+</div>
+
+<footer>
+  <p style="margin-bottom:16px;">
+    <a href="etat-dames-landing.html">Retour à la page principale</a>
+  </p>
+  <p>© État Dames — Laurence Poignet EI — SIRET 81093118800025</p>
+</footer>
+
+<script>
+  function showTab(name) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('panel-' + name).classList.add('active');
+    event.currentTarget.classList.add('active');
+    window.scrollTo({ top: document.querySelector('.tabs').offsetTop - 48, behavior: 'smooth' });
+  }
+
+  // Activation via hash (#cgv)
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#cgv') {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-cgv').classList.add('active');
+      document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    }
+  });
+</script>
+</body>
+</html>
