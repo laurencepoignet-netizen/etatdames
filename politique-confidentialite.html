@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — État Dames</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0d0d0f;
+    --dore: #C8A86B;
+    --blanc: #f5f0e8;
+    --dore-light: rgba(200,168,107,0.12);
+    --dore-mid: rgba(200,168,107,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--noir);
+    color: var(--blanc);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  nav {
+    border-bottom: 1px solid rgba(200,168,107,0.1);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--dore); }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--blanc) !important;
+    text-transform: uppercase;
+  }
+
+  .page-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--blanc);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.06em;
+    margin-bottom: 64px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--dore);
+    opacity: 0.5;
+    margin-bottom: 64px;
+  }
+
+  .section { margin-bottom: 56px; }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400;
+    color: var(--blanc);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(200,168,107,0.15);
+  }
+
+  .section p {
+    color: rgba(245,240,232,0.75);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .section ul li {
+    color: rgba(245,240,232,0.75);
+    font-size: 16px;
+    line-height: 1.85;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .section ul li::before {
+    content: '—';
+    color: var(--dore);
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    top: 3px;
+  }
+
+  .highlight-box {
+    background: rgba(200,168,107,0.06);
+    border: 1px solid rgba(200,168,107,0.15);
+    border-left: 3px solid rgba(200,168,107,0.5);
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  .highlight-box p { margin-bottom: 0; font-size: 15px; }
+
+  a { color: var(--dore); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid rgba(200,168,107,0.1);
+    padding: 40px 32px;
+    text-align: center;
+  }
+
+  footer p { font-size: 14px; color: rgba(245,240,232,0.35); margin-bottom: 8px; }
+
+  footer a {
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--dore); }
+
+  @media (max-width: 680px) {
+    .page-wrapper { padding: 48px 20px 80px; }
+    nav { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="etat-dames-landing.html" class="nav-brand">État Dames</a>
+  <a href="etat-dames-landing.html">← Retour</a>
+</nav>
+
+<main class="page-wrapper">
+
+  <h1 class="page-title">Politique de confidentialité</h1>
+  <p class="page-subtitle">Dernière mise à jour : juillet 2026</p>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h2>1. Responsable du traitement</h2>
+    <p>Les données personnelles collectées sur ce site et dans le cadre de l'activité sont traitées par :</p>
+    <div class="highlight-box">
+      <p><strong>Laurence Poignet — État Dames</strong><br>
+      Entrepreneur individuel — SIRET 810 931 188 00025<br>
+      40 rue Popincourt, 75011 Paris<br>
+      Email : <a href="mailto:laurencepoignet@etatdamescoaching.fr">laurencepoignet@etatdamescoaching.fr</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>2. Données collectées</h2>
+    <p>Sont collectés : nom, prénom, adresse email et numéro de téléphone (recueillis via les formulaires de contact et d'inscription à la newsletter ou aux webinaires), ainsi que les informations professionnelles partagées par la cliente dans le cadre de l'accompagnement, une fois la relation contractuelle engagée. L'adresse postale n'est demandée que si elle est nécessaire à la facturation.</p>
+    <p>Aucune donnée sensible (santé, opinion politique, etc.) n'est collectée sans consentement explicite.</p>
+  </div>
+
+  <div class="section">
+    <h2>3. Finalités du traitement</h2>
+    <ul>
+      <li>Répondre aux demandes de contact</li>
+      <li>Établir les devis et factures</li>
+      <li>Assurer le suivi de l'accompagnement</li>
+      <li>Adapter les recommandations à la situation de la cliente</li>
+      <li>Informer de l'actualité via la newsletter, sous réserve de consentement</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>4. Base légale</h2>
+    <ul>
+      <li><strong>Exécution du contrat</strong> : gestion de la relation client, devis, facturation, suivi de l'accompagnement</li>
+      <li><strong>Consentement</strong> : envoi de la newsletter et des communications liées aux webinaires</li>
+      <li><strong>Obligation légale</strong> : conservation des documents comptables et fiscaux</li>
+    </ul>
+    <p>Pour les prospects issus d'un webinaire, le consentement est recueilli via un formulaire Tally comportant une case à cocher non pré-cochée. Pour les clientes, le consentement est recueilli via les <a href="mentions-legales.html#cgv">CGV</a> acceptées à la signature du devis.</p>
+  </div>
+
+  <div class="section">
+    <h2>5. Durée de conservation</h2>
+    <ul>
+      <li>Données des clients actifs : pendant toute la durée de l'accompagnement, augmentée de 3 ans</li>
+      <li>Données des prospects : 1 an à compter du dernier contact</li>
+      <li>Documents comptables et fiscaux : 10 ans, conformément aux obligations légales</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>6. Destinataires et sous-traitants</h2>
+    <p>Vos données ne sont ni vendues, ni cédées à des tiers. Elles peuvent être partagées avec des prestataires agissant en qualité de sous-traitants au sens de l'article 28 du RGPD :</p>
+    <ul>
+      <li><strong>GitHub Pages</strong> (hébergement du site) — États-Unis</li>
+      <li><strong>Brevo</strong> (emailing / newsletter) — hébergé en Europe</li>
+      <li><strong>Tally</strong> (formulaires) — hébergé en Europe</li>
+      <li><strong>Indy</strong> (facturation) — hébergé en France</li>
+      <li><strong>Calendly</strong> (prise de rendez-vous) — États-Unis</li>
+      <li><strong>Google Agenda</strong> (gestion des rendez-vous) — États-Unis</li>
+      <li><strong>Google Gemini et Tactiq</strong> (prise de notes et comptes-rendus lors des séances) — États-Unis</li>
+    </ul>
+    <p>Les transferts hors Union européenne (GitHub, Google Agenda, Google Gemini, Calendly) sont encadrés par les garanties appropriées prévues par le RGPD, notamment les clauses contractuelles types adoptées par la Commission européenne.</p>
+  </div>
+
+  <div class="section">
+    <h2>7. Vos droits</h2>
+    <p>Conformément au RGPD (Règlement UE 2016/679), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> : obtenir une copie de vos données</li>
+      <li><strong>Droit de rectification</strong> : corriger des données inexactes</li>
+      <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données</li>
+      <li><strong>Droit à la limitation</strong> : restreindre le traitement dans certains cas</li>
+      <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données</li>
+      <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré</li>
+      <li><strong>Droit de retirer votre consentement</strong> à tout moment, sans que cela nuise aux traitements antérieurs</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Pour exercer vos droits, contactez-moi à : <a href="mailto:laurencepoignet@etatdamescoaching.fr">laurencepoignet@etatdamescoaching.fr</a><br>
+      Je m'engage à répondre dans un délai maximum d'un mois.</p>
+    </div>
+    <p>En cas de réclamation non résolue, vous avez le droit d'introduire une plainte auprès de la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>, 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.</p>
+  </div>
+
+  <div class="section">
+    <h2>8. Délégué à la protection des données (DPO)</h2>
+    <p>Aucun délégué à la protection des données n'a été désigné. Pour toute question relative à la protection de vos données personnelles, contactez le responsable du traitement à l'adresse ci-dessus.</p>
+  </div>
+
+  <div class="section">
+    <h2>9. Cookies</h2>
+    <p>Ce site utilise uniquement des cookies techniques strictement nécessaires à son fonctionnement. Aucun cookie publicitaire ou de traçage tiers n'est déposé.</p>
+    <p>Les polices de caractères sont chargées via Google Fonts, ce qui entraîne une requête technique vers les serveurs de Google lors du chargement de la page. Si vous souhaitez l'éviter, vous pouvez les bloquer via les paramètres de votre navigateur.</p>
+  </div>
+
+  <div class="section">
+    <h2>10. Sécurité</h2>
+    <p>Le responsable du traitement met en œuvre les mesures techniques et organisationnelles appropriées afin de garantir un niveau de sécurité adapté aux risques, notamment : l'accès sécurisé aux outils et comptes utilisés, le chiffrement des échanges de données (protocole HTTPS), la limitation des accès aux seules personnes habilitées et la réalisation de sauvegardes.</p>
+  </div>
+
+  <div class="section">
+    <h2>11. Modifications</h2>
+    <p>Cette politique peut être mise à jour à tout moment. La date de dernière mise à jour est indiquée en haut de cette page.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="mentions-legales.html#cgv">CGV</a>
+    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+  </p>
+  <p>© État Dames — Laurence Poignet EI — SIRET 810 931 188 00025</p>
+</footer>
+
+</body>
+</html>

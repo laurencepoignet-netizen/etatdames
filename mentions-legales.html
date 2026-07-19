@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales & CGV — État Dames</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --noir: #0d0d0f;
+    --dore: #C8A86B;
+    --blanc: #f5f0e8;
+    --dore-light: rgba(200,168,107,0.12);
+    --dore-mid: rgba(200,168,107,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--noir);
+    color: var(--blanc);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  nav {
+    border-bottom: 1px solid rgba(200,168,107,0.1);
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav a {
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--dore); }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: var(--blanc) !important;
+    text-transform: uppercase;
+  }
+
+  .page-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .page-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 300;
+    color: var(--blanc);
+    margin-bottom: 12px;
+    line-height: 1.1;
+  }
+
+  .page-subtitle {
+    font-size: 14px;
+    color: rgba(245,240,232,0.35);
+    letter-spacing: 0.06em;
+    margin-bottom: 64px;
+  }
+
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--dore);
+    opacity: 0.5;
+    margin-bottom: 64px;
+  }
+
+  .section { margin-bottom: 56px; }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 28px);
+    font-weight: 400;
+    color: var(--blanc);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(200,168,107,0.15);
+  }
+
+  .section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(18px, 2.4vw, 22px);
+    font-weight: 500;
+    color: var(--dore);
+    margin: 28px 0 12px;
+  }
+
+  .section p {
+    color: rgba(245,240,232,0.75);
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
+  .section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .section ul li {
+    color: rgba(245,240,232,0.75);
+    font-size: 16px;
+    line-height: 1.85;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+
+  .section ul li::before {
+    content: '—';
+    color: var(--dore);
+    opacity: 0.6;
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    top: 3px;
+  }
+
+  .highlight-box {
+    background: rgba(200,168,107,0.06);
+    border: 1px solid rgba(200,168,107,0.15);
+    border-left: 3px solid rgba(200,168,107,0.5);
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-radius: 2px;
+  }
+
+  .highlight-box p { margin-bottom: 0; font-size: 15px; }
+
+  .divider-thin {
+    width: 100%;
+    height: 1px;
+    background: rgba(200,168,107,0.15);
+    margin: 80px 0;
+  }
+
+  a { color: var(--dore); text-decoration: none; transition: opacity 0.2s; }
+  a:hover { opacity: 0.75; }
+
+  footer {
+    border-top: 1px solid rgba(200,168,107,0.1);
+    padding: 40px 32px;
+    text-align: center;
+  }
+
+  footer p { font-size: 14px; color: rgba(245,240,232,0.35); margin-bottom: 8px; }
+
+  footer a {
+    color: rgba(245,240,232,0.4);
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  footer a:hover { color: var(--dore); }
+
+  @media (max-width: 680px) {
+    .page-wrapper { padding: 48px 20px 80px; }
+    nav { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="etat-dames-landing.html" class="nav-brand">État Dames</a>
+  <a href="etat-dames-landing.html">← Retour</a>
+</nav>
+
+<main class="page-wrapper">
+
+  <h1 class="page-title">Mentions légales</h1>
+  <p class="page-subtitle">Dernière mise à jour : juillet 2026</p>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h2>Éditeur du site</h2>
+    <p>Le présent site, accessible à l'adresse etat-dames-landing.html, est édité par :</p>
+    <div class="highlight-box">
+      <p><strong>Laurence Poignet</strong>, entrepreneur individuel exerçant sous le régime de la micro-entreprise<br>
+      40 rue Popincourt, 75011 Paris<br>
+      SIRET : 810 931 188 00025<br>
+      TVA intracommunautaire : non applicable (franchise en base de TVA, article 293 B du CGI)<br>
+      Téléphone : 06 11 15 54 82<br>
+      Email : <a href="mailto:laurencepoignet@etatdamescoaching.fr">laurencepoignet@etatdamescoaching.fr</a></p>
+    </div>
+    <p>L'entrepreneur individuel est représenté par Madame Laurence Poignet, en sa qualité d'exploitante.</p>
+  </div>
+
+  <div class="section">
+    <h2>Directeur de la publication</h2>
+    <p>La directrice de la publication du site est Madame Laurence Poignet, joignable à l'adresse email : <a href="mailto:laurencepoignet@etatdamescoaching.fr">laurencepoignet@etatdamescoaching.fr</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>Hébergeur</h2>
+    <p>Le site est hébergé par :</p>
+    <div class="highlight-box">
+      <p><strong>GitHub, Inc.</strong><br>
+      88 Colin P. Kelly Jr Street, San Francisco, CA 94107, États-Unis<br>
+      Point de contact : <a href="https://support.github.com" target="_blank" rel="noopener">support.github.com</a><br>
+      Téléphone : non communiqué</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Propriété intellectuelle</h2>
+    <p>L'ensemble des éléments composant le site (textes, images, photographies, logos, graphismes, structure, mise en page et tout autre contenu) est protégé par le droit de la propriété intellectuelle et demeure la propriété exclusive de l'éditeur ou de ses ayants droit, sauf mention contraire.</p>
+    <p>Toute reproduction, représentation, modification, publication, adaptation ou exploitation, totale ou partielle, de ces éléments, par quelque procédé que ce soit et sur quelque support que ce soit, est interdite sans l'autorisation écrite préalable de l'éditeur. Toute utilisation non autorisée est susceptible de constituer une contrefaçon au sens des articles L335-2 et suivants du Code de la propriété intellectuelle.</p>
+  </div>
+
+  <div class="section">
+    <h2>Polices de caractères</h2>
+    <p>Ce site fait appel à des polices de caractères hébergées par Google Fonts, ce qui entraîne une requête technique vers les serveurs de Google lors du chargement de la page. Aucune donnée de navigation n'est collectée à cette occasion à des fins de suivi ou de publicité.</p>
+  </div>
+
+  <div class="divider-thin" id="cgv"></div>
+
+  <h1 class="page-title">Conditions générales de prestation de services</h1>
+  <p class="page-subtitle">État Dames — Laurence Poignet · en vigueur depuis le 19/07/2026</p>
+  <div class="divider"></div>
+
+  <div class="section">
+    <p>Laurence Poignet, entrepreneur individuel exerçant sous le régime de la micro-entreprise, dont l'établissement est situé 40 rue Popincourt, 75011 Paris, immatriculée sous le numéro SIRET 810 931 188 00025, TVA : non concerné (bénéficiaire de la franchise en base de TVA au sens de l'article 293 B du Code général des impôts), joignable par téléphone au 06 11 15 54 82 et par courriel à l'adresse laurencepoignet@etatdamescoaching.fr, représentée par Laurence Poignet, en qualité d'entrepreneur individuel, ci-après dénommée « le Prestataire », d'une part, et toute personne physique majeure ou morale ayant accepté les présentes Conditions Générales en passant commande, ci-après dénommée « le Client », d'autre part.</p>
+    <p>Le Prestataire exerce une activité d'accompagnement de femmes entrepreneures. Le Prestataire est titulaire d'une assurance responsabilité civile professionnelle souscrite auprès de la MAIF.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 1 — Objet et champ d'application</h2>
+    <p>Les présentes Conditions Générales ont pour objet de définir les conditions dans lesquelles le Prestataire fournit ses prestations d'accompagnement à ses Clients. Elles s'appliquent à toute commande passée auprès du Prestataire, sans restriction ni réserve.</p>
+    <p>Toute commande implique l'acceptation pleine et entière et sans réserve par le Client des présentes Conditions Générales, qui prévalent sur tout autre document du Client, et notamment sur ses éventuelles conditions générales d'achat.</p>
+    <p>Le Prestataire se réserve le droit de modifier ses Conditions Générales à tout moment. Les Conditions Générales applicables sont celles en vigueur à la date de la commande.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 2 — Description de l'activité et des offres</h2>
+    <p>Le Prestataire propose un accompagnement de femmes entrepreneures portant sur la structuration de leur activité, la création de leur offre et leur stratégie commerciale. L'accompagnement se déroule à distance, par visioconférence, sur plusieurs mois, sous forme de séances individuelles programmées à un rythme bimensuel (une séance toutes les deux semaines), selon les disponibilités respectives des parties.</p>
+    <h3>2.1 Formules proposées</h3>
+    <ul>
+      <li>« Jeu de la Dame » (formule premium) : 10 séances individuelles</li>
+      <li>« Dame de Cœur » (formule intermédiaire) : 6 séances individuelles</li>
+    </ul>
+    <p>Chaque formule inclut le nombre de séances défini ainsi que le suivi associé (préparation des séances, comptes-rendus, disponibilité entre les séances).</p>
+    <h3>2.2 Assurance responsabilité civile professionnelle</h3>
+    <p>Le Prestataire a souscrit une assurance responsabilité civile professionnelle auprès de la MAIF, couvrant les conséquences pécuniaires de sa responsabilité dans le cadre de son activité.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 3 — Commande et formation du contrat</h2>
+    <ul>
+      <li>Le Client prend contact avec le Prestataire (courriel, LinkedIn ou WhatsApp)</li>
+      <li>Une visioconférence de découverte est réalisée afin de cerner les besoins du Client</li>
+      <li>Le Prestataire adresse au Client un devis, accompagné d'un courriel récapitulatif des échanges intervenus lors de la visioconférence de découverte</li>
+    </ul>
+    <p>Le devis signé par le Client vaut engagement contractuel. Le courriel récapitulatif vient préciser le contexte des échanges mais n'a pas de valeur contractuelle autonome. Le versement du premier acompte déclenche le démarrage de l'accompagnement.</p>
+    <h3>3.1 Devis</h3>
+    <p>Un devis est systématiquement établi préalablement à toute prestation. Le devis a une durée de validité de 15 jours à compter de sa date d'émission. Passé ce délai, le Prestataire n'est plus tenu par les termes du devis.</p>
+    <h3>3.2 Zone d'intervention</h3>
+    <p>Les prestations étant réalisées intégralement à distance par visioconférence, le Prestataire intervient sans limitation géographique.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 4 — Prix et tarification</h2>
+    <p>Les prix sont exprimés en euros. Le Prestataire bénéficiant de la franchise en base de TVA (article 293 B du CGI), les prix sont nets de TVA — mention « TVA non applicable, article 293 B du CGI ».</p>
+    <h3>4.1 Grille tarifaire</h3>
+    <ul>
+      <li>« Jeu de la Dame » (formule premium, 10 séances) : 2 490 €</li>
+      <li>« Dame de Cœur » (formule intermédiaire, 6 séances) : 1 500 €</li>
+    </ul>
+    <p>Un paiement en trois fois maximum est possible sur les deux formules. Aucune remise n'est accordée.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 5 — Paiement</h2>
+    <p>Le règlement des prestations s'effectue par virement bancaire. Le Client peut opter pour un paiement échelonné en trois fois maximum. Le premier versement, correspondant à environ un tiers du montant total de la formule, constitue un acompte dont le versement déclenche le démarrage de l'accompagnement.</p>
+    <h3>5.1 Clients professionnels</h3>
+    <p>Le paiement est exigible à réception de la facture. En cas de retard de paiement, des pénalités de retard sont exigibles le jour suivant la date de règlement figurant sur la facture, sans qu'un rappel soit nécessaire. Le taux des pénalités de retard est égal au taux d'intérêt légal en vigueur. Conformément aux articles L441-10 et D441-5 du Code de commerce, une indemnité forfaitaire pour frais de recouvrement d'un montant de 40 € est due de plein droit. Aucun escompte n'est accordé pour paiement anticipé.</p>
+    <h3>5.2 Clients consommateurs</h3>
+    <p>Le paiement peut être réalisé en trois fois sans frais, les échéances étant calées sur la date anniversaire de la première séance.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 6 — Modalités de fourniture des services</h2>
+    <p>Les prestations sont réalisées à distance, par visioconférence, sous forme de séances individuelles programmées selon les disponibilités respectives des parties. L'accompagnement se déroule sur plusieurs mois, la durée variant selon la formule retenue. La durée totale de l'accompagnement ne peut excéder sept (7) mois à compter de la première séance, toutes pauses et reports inclus.</p>
+    <h3>6.1 Délais et retards</h3>
+    <p>Les comptes-rendus sont habituellement livrés sous 72 heures après chaque séance. Un retard est caractérisé au-delà de 7 jours pour un compte-rendu classique. Pour le compte-rendu final de fin d'accompagnement incluant la livraison d'un assistant IA personnalisé (formule « Jeu de la Dame »), ce délai est porté à 8 jours. Pour la formule « Dame de Cœur », le compte-rendu final suit la règle générale de 7 jours.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 7 — Modification et annulation</h2>
+    <p>Toute demande de modification de la commande par le Client doit être formulée au plus tard 7 jours avant le début de la prestation concernée. Passé ce délai, le Prestataire se réserve la faculté de refuser la modification ou de l'accepter dans la mesure de ses disponibilités.</p>
+    <p>Toute annulation de séance doit être notifiée par écrit au moins 48 heures avant son début. Toute séance annulée moins de 48 heures avant son début, ou non honorée sans notification, est décomptée du nombre de séances prévues au contrat et ne donne lieu à aucun report ni remboursement.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 8 — Obligations des parties</h2>
+    <p>Le Prestataire est tenu d'une obligation de moyens et non de résultat. Il met en œuvre toute la compétence et le soin nécessaires à la bonne exécution de l'accompagnement, dans le respect des règles de l'art et de son devoir de conseil.</p>
+    <p>Le Client s'engage à coopérer activement à la bonne exécution de la prestation, notamment en fournissant en temps utile l'ensemble des éléments, informations et validations nécessaires, et en assurant sa présence effective aux séances programmées.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 9 — Livrables et propriété intellectuelle</h2>
+    <p>Le Prestataire remet au Client un compte-rendu ou une synthèse après chaque séance. Pour la formule premium « Jeu de la Dame », le compte-rendu final de fin d'accompagnement inclut également la livraison d'un assistant IA personnalisé.</p>
+    <h3>9.1 Propriété des créations</h3>
+    <p>Le Prestataire demeure titulaire de l'ensemble des droits de propriété intellectuelle attachés aux méthodes, supports, outils et créations élaborés dans le cadre de l'accompagnement. Le Client bénéficie d'un droit d'usage strictement personnel et non cessible des livrables qui lui sont remis. Toute cession de droits éventuelle est subordonnée au paiement intégral du prix de la prestation.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 10 — Confidentialité</h2>
+    <p>Le Prestataire s'engage à traiter comme strictement confidentielles l'ensemble des informations échangées en séance, et notamment les données relatives au chiffre d'affaires, à la stratégie commerciale, ainsi qu'à la situation personnelle et professionnelle du Client.</p>
+    <p>Les engagements de confidentialité s'appliquent réciproquement aux informations dont chacune des parties pourrait avoir connaissance dans le cadre de la relation contractuelle. Le traitement des données, y compris via les outils tiers utilisés dans le cadre de l'accompagnement, est précisé dans la <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 11 — Responsabilité</h2>
+    <p>L'accompagnement repose sur une obligation de moyens et non de résultat. Le Prestataire ne garantit pas l'obtention de résultats commerciaux (chiffre d'affaires, nombre de clients signés, etc.), ceux-ci dépendant également des actions mises en œuvre par le Client lui-même.</p>
+    <p>Le Prestataire ne saurait être tenu responsable de l'inexécution ou de la mauvaise exécution du contrat en cas de survenance d'un événement de force majeure au sens de l'article 1218 du Code civil.</p>
+    <h3>11.1 Clients professionnels</h3>
+    <p>La responsabilité du Prestataire, si elle est engagée, est limitée au montant total versé par le Client au titre de la prestation concernée. Sont exclus de toute indemnisation les dommages indirects tels que la perte de chiffre d'affaires, la perte de clientèle, la perte de données ou le préjudice commercial.</p>
+    <h3>11.2 Clients consommateurs</h3>
+    <p>La responsabilité du Prestataire est limitée aux dommages directs et prévisibles au moment de la conclusion du contrat. Les présentes stipulations ne sauraient réduire les droits que le consommateur tient des dispositions d'ordre public.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 12 — Droit de rétractation (clients consommateurs)</h2>
+    <p>Conformément aux articles L221-18 et suivants du Code de la consommation, le Client consommateur dispose d'un délai de quatorze (14) jours à compter de la conclusion du contrat pour exercer son droit de rétractation, sans avoir à motiver sa décision.</p>
+    <p>Lorsque le Client demande expressément que l'exécution de la prestation commence avant l'expiration du délai de rétractation, conformément à l'article L221-28 du Code de la consommation, il reconnaît que s'il exerce son droit de rétractation après avoir formulé une telle demande, il devra régler au Prestataire un montant proportionnel aux prestations fournies jusqu'à la communication de sa décision de se rétracter.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 13 — Garanties légales (clients consommateurs)</h2>
+    <ul>
+      <li>La garantie légale de conformité prévue aux articles L217-3 et suivants du Code de la consommation</li>
+      <li>La garantie relative aux défauts de la chose vendue (vices cachés) prévue aux articles 1641 à 1649 du Code civil</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Article 14 — Médiation de la consommation</h2>
+    <p>Conformément à l'article L616-1 du Code de la consommation, le Client consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige. Le médiateur compétent est :</p>
+    <div class="highlight-box">
+      <p><strong>Société Médiation Professionnelle</strong><br>
+      24 rue Albert de Mun, 33000 Bordeaux<br>
+      <a href="https://www.mediateur-consommation-smp.fr" target="_blank" rel="noopener">www.mediateur-consommation-smp.fr</a></p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Article 15 — Données personnelles</h2>
+    <p>Le traitement des données personnelles du Client est détaillé dans la <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>Article 16 — Droit applicable et litiges</h2>
+    <p>Les présentes Conditions Générales sont soumises au droit français. En cas de litige avec un Client professionnel et à défaut de résolution amiable, compétence exclusive est attribuée au Tribunal de Commerce de Paris. Le Client consommateur peut saisir, à son choix, la juridiction du lieu de son domicile ou celle du lieu où demeure le Prestataire.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="mentions-legales.html#cgv">CGV</a>
+    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+  </p>
+  <p>© État Dames — Laurence Poignet EI — SIRET 810 931 188 00025</p>
+</footer>
+
+</body>
+</html>
